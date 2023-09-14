@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <title>Pantanir</title>
+</head>
+<body>
+    <h1>Pantanir</h1>
+
+    <h2>Panta borð og mættu til okkar eða pantaðu mat sem við sendum þér eða þú sækir.</h2>
+
+    <h3>Form (ekki hafa sér sem titil á síðu)</h3>
+
+    <h4>Panta borð</h4>
+    <form>
+        <label for="arrival-time">Hvenær viltu koma? [val um dagstíma]</label>
+        <select id="arrival-time" name="arrival-time">
+            <!-- Add options for arrival times here -->
+        </select>
+
+        <label for="party-size">Hve mörg? [val um 1–10]</label>
+        <input type="number" id="party-size" name="party-size" min="1" max="10">
+
+        <label for="special-request">Viltu taka eitthvað fram? [val um að skrifa inn texta]</label>
+        <textarea id="special-request" name="special-request"></textarea>
+    </form>
+
+    <h4>Panta mat</h4>
+    <form>
+        <label for="dish-number">Réttur #N [fimm reitir sem leyfa val úr titlum rétta á matseðli]</label>
+        <select id="dish-number" name="dish-number">
+            <!-- Add options for dish numbers here -->
+        </select>
+
+        <label for="delivery-address">Heimilisfang [val um að skrifa inn heimilisfang]</label>
+        <input type="text" id="delivery-address" name="delivery-address">
+    </form>
+
+    <h3>Þínar upplýsingar</h3>
+    <form>
+        <label for="your-name">Nafn [krafa um að setja inn nafn]</label>
+        <input type="text" id="your-name" name="your-name" required>
+
+        <label for="your-email">Netfang [krafa um að setja inn netfang, dæmi í reit áður en skrifað]</label>
+        <input type="email" id="your-email" name="your-email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}" placeholder="ditt@example.com">
+
+        <label for="your-phone">Sími [krafa um að setja inn síma, dæmi í reit áður en skrifað]</label>
+        <input type="tel" id="your-phone" name="your-phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{4}" placeholder="555-555-5555">
+    </form>
+
+    <h3>Samþykkja og panta</h3>
+    <form>
+        <label for="terms-agree">Ég samþykki skilmála Veitingastaðsins [box sem hægt er að haka í]</label>
+        <input type="checkbox" id="terms-agree" name="terms-agree">
+
+        <input type="submit" value="Panta">
+    </form>
+</body>
+</html>
